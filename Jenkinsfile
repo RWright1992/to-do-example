@@ -3,17 +3,17 @@ pipeline{
     stages{
     stage('Build Docker image'){
         steps{
-            sh 'docker build -t rwright/todopipe:latest .'
+            sh 'docker build -t rwright1992/todopipe:latest .'
         }
     }
     stage('Push Docker Image'){
         steps{
-            sh 'docker push rwright/todopipe:latest'
+            sh 'docker push rwright1992/todopipe:latest'
         }
     }
     stage('Run Docker Container'){
         steps{
-            sh 'docker run -d -p 5000:5000 --name to-do-container rwright/todopipe:latest'
+            sh 'docker run -d -p 5000:5000 --name to-do-container rwright1992/todopipe:latest'
         }
     }
     }
