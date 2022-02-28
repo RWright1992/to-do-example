@@ -3,7 +3,7 @@ pipeline{
     stages{
     stage('Build Docker image'){
         steps{
-            sh 'docker build -t rwright/todopipe:latest'
+            sh 'docker build -t rwright/todopipe:latest .'
         }
     }
     stage('Push Docker Image'){
